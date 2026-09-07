@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surprise For You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Screen PIN -->
+    <div id="screen-pin" class="screen active">
+      <h2>Enter a password</h2>
+      <div class="pin-display">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+
+      <div class="keypad">
+        <button class="key" data-key="1">1</button>
+        <button class="key" data-key="2">2</button>
+        <button class="key" data-key="3">3</button>
+        <button class="key" data-key="4">4</button>
+        <button class="key" data-key="5">5</button>
+        <button class="key" data-key="6">6</button>
+        <button class="key" data-key="7">7</button>
+        <button class="key" data-key="8">8</button>
+        <button class="key" data-key="9">9</button>
+        <button class="key" data-key="*">*</button>
+        <button class="key" data-key="0">0</button>
+        <button class="key" data-key="#">#</button>
+      </div>
+    </div>
+
+    <!-- Screen Envelope -->
+    <div id="screen-envelope" class="screen">
+      <div id="envelope-btn" class="envelope"></div>
+      <p>Klik amplop untuk membuka</p>
+    </div>
+
+    <!-- Screen Letter -->
+    <div id="screen-letter" class="screen">
+      <div class="letter-card">
+        <h3>For You, Si Cantik & Centil Whinnaa💜</h3>
+        <br>
+        <p id="letter-text"></p>
+      </div>
+      <button id="btn-next-letter" class="btn">Lanjut</button>
+    </div>
+
+    <!-- Screen Menu Utama -->
+    <div id="screen-menu" class="screen">
+      <h2>There's still more</h2>
+      <p style="font-size: 12px; color: #aaa; margin-top: 5px;">Waiting for you</p>
+      
+      <img src="./gambar-untuk-web-whinna/cat-ngintip-dari-kiri.png" alt="Cat Left" class="cat-image-left">
+      <img src="./gambar-untuk-web-whinna/cat-ngintip-dari-kanan.png" alt="Cat Right" class="cat-image-right">
+
+      <div class="menu-grid">
+        <div class="menu-card" data-subscreen="memories">🩵</div>
+        <div class="menu-card" data-subscreen="flowers">💐</div>
+        <div class="menu-card" data-subscreen="playlist">🎵</div>
+      </div>
+    </div>
+
+    <!-- Screen Our Memories -->
+    <div id="screen-memories" class="screen">
+      <div class="memories-wrapper">
+        <div class="memories-header">
+          <h2 class="memories-title">Our Memories</h2>
+          <button class="btn-back" data-back="menu">Back ♡</button>
+        </div>
+
+        <div class="memories-grid">
+          <!-- Kolom Kiri -->
+          <div class="scrapbook-col">
+            <div class="polaroid-frame rotate-left-1 stamp-edge">
+              <span class="flower-sticker">🌸</span>
+              <img src="./gambar-untuk-web-whinna/foto-1.jpg" alt="Memory 1">
+            </div>
+
+            <div class="polaroid-frame rotate-right-1">
+              <div class="tape-sticker"></div>
+              <img src="./gambar-untuk-web-whinna/foto-2.jpg" alt="Memory 2">
+              <span class="bow-sticker">🎀</span>
+            </div>
+
+            <div class="polaroid-frame rotate-left-2">
+              <img src="./gambar-untuk-web-whinna/foto-3.jpg" alt="Memory 3">
+            </div>
+          </div>
+
+          <!-- Kolom Kanan -->
+          <div class="scrapbook-col">
+            <div class="polaroid-frame rotate-right-2">
+              <span class="camera-sticker">📷</span>
+              <img src="./gambar-untuk-web-whinna/foto-4.jpg" alt="Memory 4">
+            </div>
+
+            <p class="memories-quote">
+              "Every photo tells a story, every smile holds a memory, and every moment reminds me how lucky I am to have you. These may just be pictures, but to me, they're little pieces of happiness that I'll always treasure."
+            </p>
+
+            <div class="polaroid-frame rotate-right-1">
+              <div class="tape-sticker"></div>
+              <img src="./gambar-untuk-web-whinna/foto-5.jpg" alt="Memory 5">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen Flowers -->
+    <div id="screen-flowers" class="screen">
+      <div class="back-button-container">
+        <button class="btn-back" data-back="menu">Back ♡</button>
+      </div>
+
+      <div class="flowers-layout">
+        <!-- Kolom Kiri (Teks) -->
+        <div class="left-column">
+          <div class="flowers-title-wrapper">
+            <h1 class="page-title-base">Flowers For</h1>
+            <span class="page-title-script">My favorite person</span>
+          </div>
+
+          <p class="flowers-text">
+            Because you deserve every beautiful thing this world has to offer. Thank you for being someone so kind, so caring, and so incredibly strong, even on the days when no one notices how hard you're trying. I hope these flowers remind you that you're deeply appreciated, endlessly loved, and that I'm always proud of the person you are becoming. Never let anyone, including yourself, make you believe you're anything less than amazing.
+          </p>
+        </div>
+
+        <!-- Kolom Kanan (gambar Bouquet) -->
+        <div class="right-column">
+          <img src="./gambar-untuk-web-whinna/purple-flowers.png" alt="Bouquet" class="bouquet-image">
+          <span class="sparkle-sticker">✨</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Screen Playlist -->
+    <div id="screen-playlist" class="screen">
+      <div class="playlist-header-bar">
+        <button class="btn-back" data-back="menu">Back ♡</button>
+      </div>
+
+      <!-- Pemutar Musik Utama -->
+      <div class="player-card">
+        <span class="headphone-icon-sticker">🎧</span>
+        <span class="music-notes-sticker">🎶</span>
+
+        <div class="player-info">
+          <div class="player-title">Kamu</div>
+          <div class="player-artist">Cowboy Junior</div>
+
+          <div class="progress-bar-container">
+            <div class="progress-fill"></div>
+            <div class="progress-dot"></div>
+          </div>
+
+          <div class="player-controls-row">
+            <span>🔄</span>
+            <span>⏮</span>
+            <span>⏸</span>
+            <span>⏭</span>
+            <span>♡</span>
+          </div>
+        </div>
+
+        <div class="player-album-wrapper">
+          <div class="album-cover-stamp">
+            <img src="./gambar-untuk-web-whinna/kamu.jpg" alt="Kamu Album">
+          </div>
+          <div class="vinyl-disc"></div>
+        </div>
+      </div>
+
+      <!-- Playlist Items Box -->
+      <div class="playlist-section-box">
+        <div class="playlist-title-header">
+          <span class="playlist-title-script">Playlist</span>
+          <span class="playlist-title-regular">For You</span>
+        </div>
+
+        <span class="mp3-sticker">📟</span>
+        <span class="big-clef-sticker">🎼</span>
+
+        <div class="playlist-grid">
+          <!-- Song 1 -->
+          <div class="song-card">
+            <img src="./gambar-untuk-web-whinna/risk-it-all.jpg" alt="Risk It All">
+            <div class="song-card-info">
+              <h4>Risk It All</h4>
+              <p>Bruno Mars</p>
+            </div>
+          </div>
+
+          <div class="song-divider"></div>
+
+          <!-- Song 2 -->
+          <div class="song-card">
+            <img src="./gambar-untuk-web-whinna/stuck-on-you.jpg" alt="Stuck On You">
+            <div class="song-card-info">
+              <h4>Stuck On You</h4>
+              <p>Lionel Richie</p>
+            </div>
+          </div>
+
+          <div class="song-divider"></div>
+
+          <!-- Song 3 -->
+          <div class="song-card">
+            <img src="./gambar-untuk-web-whinna/mmg.jpg" alt="MMG">
+            <div class="song-card-info">
+              <h4>MMG</h4>
+              <p>Naykilla</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Modals -->
+  <div id="modal-wrong" class="modal">
+    <div class="modal-content wrong-content">
+      <img src="./gambar-untuk-web-whinna/peach-cat.png" alt="Wrong Password" class="modal-cat">
+      <h3>Wrong Password!</h3>
+      <p style="font-size: 12px; margin-top: 10px;">Clue: Tanggal & Bulan Ulangtahun Kamu.</p>
+      <button id="btn-try-again" class="btn">Try Again</button>
+    </div>
+  </div>
+
+  <div id="modal-success" class="modal">
+    <div class="modal-content success-content">
+      <img src="./gambar-untuk-web-whinna/happy-cat-fix.png" alt="Success" class="modal-cat">
+      <h3>Yay! 🎉</h3>
+      <p style="font-size: 13px; margin-top: 10px;">You found the right key to my heart &gt;&lt;</p>
+      <button id="btn-open-surprise" class="btn">Open Surprise</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
