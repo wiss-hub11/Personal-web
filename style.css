@@ -478,10 +478,11 @@ body {
   border-radius: 2px;
   position: relative;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .progress-fill {
-  width: 35%;
+  width: 0%;
   height: 100%;
   background: #ffffff;
   border-radius: 2px;
@@ -494,7 +495,7 @@ body {
   border-radius: 50%;
   position: absolute;
   top: -2px;
-  left: 35%;
+  left: 0%;
 }
 
 .player-controls-row {
@@ -537,7 +538,11 @@ body {
   margin-left: -30px;
   z-index: 1;
   border: 2px solid #555;
-  animation: spinVinyl 8s linear infinite;
+}
+
+/* Animasi Putar Vinyl saat Musik Dimainkan */
+.vinyl-disc.spinning {
+  animation: spinVinyl 3s linear infinite;
 }
 
 @keyframes spinVinyl {
@@ -643,7 +648,7 @@ body {
 .song-divider::after { bottom: -8px; }
 
 .mp3-sticker {
-  position: absolute;
+  position: number;
   top: -15px;
   right: 50px;
   font-size: 24px;
