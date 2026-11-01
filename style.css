@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #813d8a;
+  background-color: #f7B8C6; /* Diubah menjadi warna pink lemonade */
   color: #ffffff;
   display: flex;
   justify-content: center;
@@ -540,7 +540,6 @@ body {
   border: 2px solid #555;
 }
 
-/* Animasi Putar Vinyl saat Musik Dimainkan */
 .vinyl-disc.spinning {
   animation: spinVinyl 3s linear infinite;
 }
@@ -576,7 +575,7 @@ body {
   position: absolute;
   top: -20px;
   left: 20px;
-  background: #813d8a;
+  background: #f7B8C6; /* Disesuaikan dengan warna background baru */
   padding: 0 10px;
   display: flex;
   align-items: center;
@@ -648,7 +647,7 @@ body {
 .song-divider::after { bottom: -8px; }
 
 .mp3-sticker {
-  position: number;
+  position: absolute;
   top: -15px;
   right: 50px;
   font-size: 24px;
