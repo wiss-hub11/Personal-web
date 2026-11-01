@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const CORRECT_PIN = "0709";
+  const CORRECT_PIN = "0211";
   let currentPin = "";
 
   const letterPages = [
