@@ -149,6 +149,10 @@
         <button class="btn-back" data-back="menu">Back ♡</button>
       </div>
 
+      <!-- Elemen Audio untuk memutar lagu Serba Salah -->
+      <!-- Ganti 'serba-salah.mp3' dengan nama file/link audio lagumu -->
+      <audio id="bg-music" src="./gambar-untuk-web-dasin/serba-salah.mp3" preload="auto"></audio>
+
       <!-- Pemutar Musik Utama -->
       <div class="player-card">
         <span class="headphone-icon-sticker">🎧</span>
@@ -159,14 +163,14 @@
           <div class="player-artist">Raisa</div>
 
           <div class="progress-bar-container">
-            <div class="progress-fill"></div>
-            <div class="progress-dot"></div>
+            <div id="progress-fill" class="progress-fill"></div>
+            <div id="progress-dot" class="progress-dot"></div>
           </div>
 
           <div class="player-controls-row">
             <span>🔄</span>
             <span>⏮</span>
-            <span>⏸</span>
+            <span id="play-pause-btn" style="cursor: pointer; font-size: 18px;">▶</span>
             <span>⏭</span>
             <span>♡</span>
           </div>
@@ -176,7 +180,7 @@
           <div class="album-cover-stamp">
             <img src="./gambar-untuk-web-dasin/serba-salah.jpg" alt="Serba Salah Album">
           </div>
-          <div class="vinyl-disc"></div>
+          <div id="vinyl-disc" class="vinyl-disc"></div>
         </div>
       </div>
 
