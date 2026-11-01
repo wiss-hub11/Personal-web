@@ -85,6 +85,58 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById(`screen-${screenName}`).classList.add('active');
   }
 
+  // --- Logika Audio / Pemutar Musik ---
+  const bgMusic = document.getElementById('bg-music');
+  const playPauseBtn = document.getElementById('play-pause-btn');
+  const vinylDisc = document.getElementById('vinyl-disc');
+  const progressFill = document.getElementById('progress-fill');
+  const progressDot = document.getElementById('progress-dot');
+  const progressBarContainer = document.querySelector('.progress-bar-container');
+
+  if (playPauseBtn && bgMusic) {
+    playPauseBtn.addEventListener('click', () => {
+      if (bgMusic.paused) {
+        bgMusic.play().then(() => {
+          playPauseBtn.innerText = '⏸';
+          vinylDisc.classList.add('spinning');
+        }).catch(err => {
+          console.log("Gagal memutar audio:", err);
+        });
+      } else {
+        bgMusic.pause();
+        playPauseBtn.innerText = '▶';
+        vinylDisc.classList.remove('spinning');
+      }
+    });
+
+    // Update progress bar saat lagu berjalan
+    bgMusic.addEventListener('timeupdate', () => {
+      if (bgMusic.duration) {
+        const percent = (bgMusic.currentTime / bgMusic.duration) * 100;
+        progressFill.style.width = percent + '%';
+        progressDot.style.left = percent + '%';
+      }
+    });
+
+    // Ketika lagu selesai
+    bgMusic.addEventListener('ended', () => {
+      playPauseBtn.innerText = '▶';
+      vinylDisc.classList.remove('spinning');
+      progressFill.style.width = '0%';
+      progressDot.style.left = '0%';
+    });
+
+    // Klik pada progress bar untuk melompat ke durasi tertentu
+    progressBarContainer.addEventListener('click', (e) => {
+      const rect = progressBarContainer.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const width = rect.width;
+      if (bgMusic.duration) {
+        bgMusic.currentTime = (clickX / width) * bgMusic.duration;
+      }
+    });
+  }
+
   // --- Event Listeners ---
   
   // Tombol Keypad
