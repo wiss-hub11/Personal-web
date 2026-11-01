@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const letterPages = [
     "There's something I've been waiting to tell you for a while. Mungkin ini cuma surat sederhana, tapi every single word comes straight from my heart.\n\nSo... will you read it until the end?",
+    "Happy 18th Birthday to my favorite person, Dasinn! May this new chapter bring you so much joy and success. I'm so proud of you, and I’ll always be right here supporting you!!",
     "Thank you for being someone who has brought so much warmth into my life. Entah kamu sadar atau tidak, keberadaanmu selalu berhasil membuat hari-hariku terasa lebih indah.",
     "Meeting you is one of the best things that has ever happened to me. I hope life always gives you reasons to smile. Thank you for being you."
   ];
